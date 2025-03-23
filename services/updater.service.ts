@@ -82,11 +82,11 @@ export default class Updater {
   }
 
   private async replaceFiles(extractPath: string): Promise<void> {
-    const updatesPath = `${extractPath}/denotest-main`;
+    const updatesPath = `${extractPath}/${appConfig.name}-main`;
     const existingFiles = await this.listFiles("./");
     const newFiles = await this.listFiles(updatesPath);
 
-    // await fs.copy(updatesPath, "./", { overwrite: true });
+    await fs.copy(updatesPath, "./", { overwrite: true });
 
     // for (const file of existingFiles) {
     //   if (!newFiles.has(file)) {

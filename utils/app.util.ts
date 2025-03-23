@@ -1,4 +1,4 @@
-import appConfig from "../configs/app.config.ts";
+import appConfig from "../config/app.config.ts";
 
 export function logBanner() {
   console.log(`
